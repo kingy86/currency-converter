@@ -1,0 +1,18 @@
+.currency-converter{
+    display: flex;
+    padding: 30px;
+    margin: 0 auto;
+    background: #356A87;
+    width: 60%;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+input{
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: "Roboto", sans-serif;
+}
