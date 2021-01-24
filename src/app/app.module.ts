@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AboutComponent } from './about/about.component';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
-import { CurrencyInputComponent } from './currency-input/currency-input.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -14,8 +13,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    CurrencyConverterComponent,
-    CurrencyInputComponent
+    CurrencyConverterComponent
   ],
   imports: [
     BrowserModule,
