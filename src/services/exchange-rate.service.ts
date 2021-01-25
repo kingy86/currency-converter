@@ -5,14 +5,13 @@ import { Observable } from 'rxjs';
 import { ExchangeRateResponse } from './payloads/exchange-rate-response';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ExchangeRateService {
-
-  constructor(private httpClient: HttpClient) { 
-
-    }
-    getRates(base: string): Observable<ExchangeRateResponse>{
-      return this.httpClient.get<ExchangeRateResponse>("https://api.exchangeratesapi.io/latest?base=USD")
+  constructor(private httpClient: HttpClient) {}
+  getRates(base: string): Observable<ExchangeRateResponse> {
+    return this.httpClient.get<ExchangeRateResponse>(
+      `https://api.exchangeratesapi.io/latest?base=${base}`
+    );
   }
 }
