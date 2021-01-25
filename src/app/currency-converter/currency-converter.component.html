@@ -5,7 +5,12 @@
       {{ currency }}
     </option>
   </select>
-  <img src="../../assets/arrows.png" class="arrows-icon" />
+  <img
+    src="../../assets/arrows.png"
+    class="arrows-icon"
+    width="30px"
+    height="30px"
+  />
   <select [(ngModel)]="to">
     <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
       {{ currency }}
