@@ -11,14 +11,19 @@
     width="30px"
     height="30px"
   />
+  <input
+    type="number"
+    placeholder="amount"
+    [value]="convertAmount().toFixed(2)"
+  />
   <select [(ngModel)]="to">
     <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
       {{ currency }}
     </option>
   </select>
 
-  <h2>
+  <!-- <h2>
     {{ amount.toFixed(2) }} {{ from }} = {{ convertAmount().toFixed(2) }}
     {{ to }}
-  </h2>
+  </h2> -->
 </div>
