@@ -1,18 +1,16 @@
 <div class="currency-converter">
-  <h3>From :</h3>
+  <input type="number" placeholder="amount" [(ngModel)]="amount" />
   <select [(ngModel)]="from" (change)="loadRates()">
     <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
       {{ currency }}
     </option>
   </select>
-  <h3>To :</h3>
+  <img src="../../assets/arrows.png" class="arrows-icon" />
   <select [(ngModel)]="to">
     <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
       {{ currency }}
     </option>
   </select>
-
-  <input type="number" placeholder="amount" [(ngModel)]="amount" />
 
   <h2>
     {{ amount.toFixed(2) }} {{ from }} = {{ convertAmount().toFixed(2) }}

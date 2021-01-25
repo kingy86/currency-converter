@@ -1,6 +1,6 @@
 .currency-converter {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   padding: 30px;
   margin: 0 auto;
   background: #356a87;
