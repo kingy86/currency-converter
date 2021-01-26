@@ -1,5 +1,5 @@
 <div class="currency-converter">
-  <input type="number" placeholder="amount" [(ngModel)]="amount" />
+  <input type="number" placeholder="amount" [(ngModel)]="amountFrom" />
   <select [(ngModel)]="from" (change)="loadRates()">
     <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
       {{ currency }}
@@ -14,7 +14,7 @@
   <input
     type="number"
     placeholder="amount"
-    [value]="convertAmount().toFixed(2)"
+    [value]="convertAmountTo().toFixed(2)"
   />
   <select [(ngModel)]="to">
     <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
@@ -22,8 +22,9 @@
     </option>
   </select>
 
-  <!-- <h2>
-    {{ amount.toFixed(2) }} {{ from }} = {{ convertAmount().toFixed(2) }}
+  <h2>
+    {{ baseAmount.toFixed(2) }} {{ from }} =
+    {{ showConversionRateFromBaseAmount().toFixed(2) }}
     {{ to }}
-  </h2> -->
+  </h2>
 </div>

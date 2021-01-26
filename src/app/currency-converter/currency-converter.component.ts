@@ -7,13 +7,26 @@ import { ExchangeRateService } from '../../services/exchange-rate.service';
   styleUrls: ['./currency-converter.component.css'],
 })
 export class CurrencyConverterComponent implements OnInit {
-  amount = 1;
+  baseAmount = 1;
+  amountFrom = 1;
+  amountTo = 0;
   from = 'GBP';
   to = 'EUR';
   rates!: { [key: string]: number };
 
-  convertAmount(): number {
-    return this.amount * this.rates[this.to];
+  convertAmountTo(): number {
+    this.amountTo = this.amountFrom * this.rates[this.to];
+    return this.amountTo;
+  }
+
+  convertAmountFrom(): number {
+    this.amountFrom = this.amountTo * this.rates[this.from];
+    return this.amountFrom;
+  }
+
+  showConversionRateFromBaseAmount(): number {
+    // this.amountTo = this.amountFrom * this.rates[this.to];
+    return this.baseAmount * this.rates[this.to];
   }
 
   loadRates() {

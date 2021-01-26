@@ -20,7 +20,6 @@ select {
   padding: 5px 10px;
   font-family: "Roboto", sans-serif;
 }
-h3 {
-  text-align: center;
-  margin: 10px;
+h2 {
+  margin: 5px;
 }
