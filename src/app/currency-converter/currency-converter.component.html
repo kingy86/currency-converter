@@ -22,9 +22,10 @@
     </option>
   </select>
 
-  <h2>
-    {{ baseAmount.toFixed(2) }} {{ from }} =
-    {{ showConversionRateFromBaseAmount().toFixed(2) }}
-    {{ to }}
-  </h2>
+  <app-single-conversion
+    [amount]="baseAmount.toFixed(2)"
+    [convertFrom]="from"
+    [conversion]="showConversionRateFromBaseAmount().toFixed(2)"
+    [convertTo]="to"
+  ></app-single-conversion>
 </div>
