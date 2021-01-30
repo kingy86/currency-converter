@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { CurrencyConverterComponent } from './currency-converter/currency-converter.component';
 import { FormsModule } from '@angular/forms';
 import { SingleConversionComponent } from './single-conversion/single-conversion.component';
+import { HistoricDataComponent } from './historic-data/historic-data.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SingleConversionComponent } from './single-conversion/single-conversion
     NavbarComponent,
     AboutComponent,
     CurrencyConverterComponent,
-    SingleConversionComponent
+    SingleConversionComponent,
+    HistoricDataComponent
   ],
   imports: [
     BrowserModule,
