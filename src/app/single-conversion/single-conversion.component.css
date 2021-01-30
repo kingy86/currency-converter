@@ -1,3 +1,6 @@
-h2 {
+.single {
   font-family: "Raleway", sans-serif;
+  display: flex;
+  align-self: start;
+  margin-left: 70px;
 }
