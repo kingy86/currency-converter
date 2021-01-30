@@ -1,6 +1,6 @@
 .currency-converter {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   padding: 30px;
   margin: 0 auto;
@@ -8,6 +8,11 @@
   width: 60%;
   border-radius: 30px;
   color: #ffffff;
+}
+
+.converter-container {
+  display: flex;
+  align-items: center;
 }
 
 input,

@@ -1,26 +1,28 @@
 <div class="currency-converter">
-  <input type="number" placeholder="amount" [(ngModel)]="amountFrom" />
-  <select [(ngModel)]="from" (change)="loadRates()">
-    <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
-      {{ currency }}
-    </option>
-  </select>
-  <img
-    src="../../assets/arrows.png"
-    class="arrows-icon"
-    width="30px"
-    height="30px"
-  />
-  <input
-    type="number"
-    placeholder="amount"
-    [value]="convertAmountTo().toFixed(2)"
-  />
-  <select [(ngModel)]="to">
-    <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
-      {{ currency }}
-    </option>
-  </select>
+  <div class="converter-container">
+    <input type="number" placeholder="amount" [(ngModel)]="amountFrom" />
+    <select [(ngModel)]="from" (change)="loadRates()">
+      <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+    <img
+      src="../../assets/arrows.png"
+      class="arrows-icon"
+      width="30px"
+      height="30px"
+    />
+    <input
+      type="number"
+      placeholder="amount"
+      [value]="convertAmountTo().toFixed(2)"
+    />
+    <select [(ngModel)]="to">
+      <option *ngFor="let currency of getAllCurrencies()" [value]="currency">
+        {{ currency }}
+      </option>
+    </select>
+  </div>
 
   <app-single-conversion
     [amount]="baseAmount.toFixed(2)"
