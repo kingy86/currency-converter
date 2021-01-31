@@ -7,17 +7,19 @@ import { ExchangeRateService } from '../../services/exchange-rate.service';
   styleUrls: ['./historic-data.component.css'],
 })
 export class HistoricDataComponent implements OnInit {
-  // historicRates!: {
+  historicRates!: {};
 
-  // }
-
-  constructor(private service: ExchangeRateService) {
-    this.service
-      .getHistoricRates('ILS', 'JPY', '2021-01-30', '2020-10-01')
-      .subscribe((result) => {
-        console.log('Historic Data : ' + result);
-      });
+  loadHistoricRates() {
+    this.service.getHistoricRates('GBP', '2019').subscribe((result) => {
+      return console.log((this.historicRates = result));
+    });
   }
 
-  ngOnInit(): void {}
+  constructor(private service: ExchangeRateService) {
+    this.service.getHistoricRates('ILS', '2019').subscribe((result) => {});
+  }
+
+  ngOnInit(): void {
+    this.loadHistoricRates();
+  }
 }

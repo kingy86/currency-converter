@@ -16,13 +16,11 @@ export class ExchangeRateService {
     );
   }
   getHistoricRates(
-    convertTo: string,
-    convertFrom: string,
-    dateFrom: string,
-    dateTo: string
+    base: string,
+    year: string
   ): Observable<HistoricRateResponse> {
     return this.httpClient.get<HistoricRateResponse>(
-      `https://api.exchangeratesapi.io/history?start_at=${dateFrom}&end_at=${dateTo}&symbols=${convertTo},${convertFrom}`
+      `https://api.exchangeratesapi.io/history?start_at=${year}-01-01&end_at=${year}-12-31&base=${base}`
     );
   }
 }

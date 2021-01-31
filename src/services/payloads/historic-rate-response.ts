@@ -1,7 +1,10 @@
 export interface HistoricRateResponse {
   rates: {
-    date: {
+    dates: {
       [key: string]: number;
     };
   };
+  start_at: string;
+  base: string;
+  end_at: string;
 }
