@@ -1,15 +1,6 @@
-<h1>Historic Rates</h1>
 <div class="historic-container">
   <div class="historic-data">
-    <h2 class="month-heading"></h2>
-    <h2>Rate will render here</h2>
+    <!-- <h2 *ngFor="let date of fetchDates()">{{ date }}</h2> -->
+    <h2 *ngFor="let value of fetchValues()">{{ value }}</h2>
   </div>
-  <!-- <div class="historic-data">
-    <h2 class="month-heading">3 Month</h2>
-    <h2>Rate will render here</h2>
-  </div>
-  <div class="historic-data">
-    <h2 class="month-heading">6 Month</h2>
-    <h2>Rate will render here</h2>
-  </div> -->
 </div>
